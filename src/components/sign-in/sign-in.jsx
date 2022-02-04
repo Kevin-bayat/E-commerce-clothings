@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 import "./sign-in.scss";
 import FormInput from "../form-input/form-input";
-import CustomButton from "../custom-button/custom-button";
 import { signInWithGoogle } from "../../firebase/firebase.util";
+import { CustomButtonContainer } from "../custom-button/custom-button.styled";
 
 class SignIn extends Component {
   constructor(props) {
@@ -43,10 +43,10 @@ class SignIn extends Component {
             changeHandler={this.changeHandler}
           />
           <div className="buttons">
-            <CustomButton type="submit">Sign In</CustomButton>
-            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            <CustomButtonContainer type="submit">Sign In</CustomButtonContainer>
+            <CustomButtonContainer onClick={signInWithGoogle} isGoogleSignIn>
               Sign In With Google
-            </CustomButton>
+            </CustomButtonContainer>
           </div>
         </form>
       </div>

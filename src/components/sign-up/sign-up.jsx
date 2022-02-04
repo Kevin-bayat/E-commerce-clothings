@@ -2,7 +2,7 @@ import React from "react";
 
 import "./sign-up.styles.scss";
 import FormInput from "../form-input/form-input";
-import CustomButton from "../custom-button/custom-button";
+import { CustomButtonContainer } from "../custom-button/custom-button.styled";
 // import {
 //   auth,
 //   createUserProfileInDocument,
@@ -93,7 +93,7 @@ class SignUp extends React.Component {
             value={confirmPassword}
             changeHandler={this.changeHandler}
           />
-          <CustomButton type="submit">Sign Up</CustomButton>
+          <CustomButtonContainer type="submit">Sign Up</CustomButtonContainer>
         </form>
       </div>
     );

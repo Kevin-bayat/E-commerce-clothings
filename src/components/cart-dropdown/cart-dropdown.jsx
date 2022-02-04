@@ -1,11 +1,11 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import "./cart-dropdown.scss";
-import CustomButton from "../custom-button/custom-button";
 import { connect } from "react-redux";
 import CartItem from "../cart-item/cart-item";
 import { cartSelectItems } from "../../redux/cart/cart-selector";
 import { toggleCartHidden } from "../../redux/cart/cart.action";
+import { CustomButtonContainer } from "../custom-button/custom-button.styled";
 
 const CartDropdown = ({ cartItem, history, dispatch }) => {
   return (
@@ -19,14 +19,14 @@ const CartDropdown = ({ cartItem, history, dispatch }) => {
           <span className="empty-message">Your Cart Is Empty</span>
         )}
       </div>
-      <CustomButton
+      <CustomButtonContainer
         onClick={() => {
           history.push("/checkout");
           dispatch(toggleCartHidden());
         }}
       >
         Go To Checkout
-      </CustomButton>
+      </CustomButtonContainer>
     </div>
   );
 };
